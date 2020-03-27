@@ -8,9 +8,9 @@ def split_number(n, m):
         return [n]
 
     equal = n // m
-    left = n - (n // m * m)
+    left = n - (equal * (m - 1))
 
-    return [equal for i in range(m)] + [left]
+    return [equal for i in range(m - 1)] + [left]
 
 
 def dos(n, url):
